@@ -3,7 +3,6 @@ import Home from './routes/Home';
 import Detail from './routes/Detail';
 
 const App = () => {
-  console.log(process.env.PUBLIC_URL + '메렁');
   const router = createBrowserRouter([
     {
       path: `${process.env.PUBLIC_URL}/`,

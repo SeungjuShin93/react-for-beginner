@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DetailPage from '../components/DetailPage';
+import styles from './Detail.module.css';
 
 function Detail() {
   const { id } = useParams();
@@ -17,6 +18,16 @@ function Detail() {
     getMovie();
   }, []);
   console.log(info);
-  return <div>{loading ? 'Loading...' : <DetailPage info={info} />}</div>;
+  return (
+    <div className={styles.container}>
+      {loading ? (
+        <div className={styles.loader}>
+          <h1>Loading...</h1>
+        </div>
+      ) : (
+        <DetailPage info={info} />
+      )}
+    </div>
+  );
 }
 export default Detail;

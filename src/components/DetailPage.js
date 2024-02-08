@@ -1,5 +1,4 @@
 function DetailPage({ info }) {
-  console.log(info);
   return (
     <>
       <h1>{info.title}</h1>
