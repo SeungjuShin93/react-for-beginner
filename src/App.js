@@ -9,7 +9,7 @@ const App = () => {
       element: <Home />,
     },
     {
-      path: '/movie/:id',
+      path: 'movie/:id',
       element: <Detail />,
     },
   ]);
